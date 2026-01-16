@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>VIVO </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css 动画库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS 滚动动画库 -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- 自定义CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .forum-card { margin-bottom:30px; }
+    .forum-card h5 { font-weight:600; }
+    .stats { font-size:0.85rem; color:#6c757d; margin-bottom:10px; }
+    .comment { border-top:1px solid #ddd; padding:10px 0; }
+    .comment .meta { font-size:0.85rem; font-weight:600; color:#444; }
+    .comment .text { margin-top:3px; }
+    .comment-form { margin-top:15px; }
+    .btn-post { font-size:0.85rem; }
+      .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* 加粗 */
+    font-size: 2.0rem; /* 可以根据需要调整大小 */
+    color: #ffffff; /* 文字颜色 */
+    vertical-align: middle; /* 和图片垂直对齐 */
+}
+    .hero-section {
+  position: relative;
+  min-height: 100vh;
+
+    /* 背景图片 */
+    background: url("img/bg5.png") no-repeat center center / cover;
+
+    /* 文字在最上层 */
+    z-index: 1;
+  }
+
+  /* 灰色半透明遮罩层 */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* 灰色 + 透明度 */
+    background-color: rgba(0, 0, 0, 0.45);
+
+    z-index: 0;
+  }
+
+  /* 确保内容在遮罩层之上 */
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"> 
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <span class="logo-text">VIVO 2.0</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link active" href="community.html">COMMUNITY</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">DONATE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<header  class="hero-section d-flex align-items-center text-white text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Community Help Platform</h1>
+    <p class="lead animate__animated animate__fadeInUp">Food Sharing & Donation Ecosystem</p>
+  </div>
+</header>
+<section class="py-5">
+  <div class="container">
+
+    <!-- 帖子 1 -->
+    <div class="card forum-card shadow-sm p-3" data-aos="fade-up">
+      <h5>💡 Budget-Friendly Recipes Sharing</h5>
+      <div class="stats">👀 326 views · 👍 84 likes · Posted Jan 10, 2026</div>
+      <div class="comments-container">
+        <div class="comment"><div class="meta">Emily R.</div><div class="text">I have leftover rice and carrots from yesterday, happy to share.</div></div>
+        <div class="comment"><div class="meta">Daniel W.</div><div class="text">You can turn that into fried rice, very easy and cheap.</div></div>
+        <div class="comment"><div class="meta">Sophia L.</div><div class="text">I usually freeze leftover rice, works well!</div></div>
+      </div>
+      <form class="comment-form">
+        <input class="form-control mb-2" placeholder="Your name" required>
+        <textarea class="form-control mb-2" rows="2" placeholder="Write a comment..." required></textarea>
+        <button type="submit" class="btn btn-primary btn-sm btn-post">Post Comment</button>
+      </form>
+    </div>
+
+    <!-- 帖子 2 -->
+    <div class="card forum-card shadow-sm p-3" data-aos="fade-up">
+      <h5>⚙️ Nearby Food Donations Needed (KL Area)</h5>
+      <div class="stats">👀 412 views · 👍 129 likes · Posted Jan 12, 2026</div>
+      <div class="comments-container">
+        <div class="comment"><div class="meta">James T.</div><div class="text">I have 6 packs of pasta available near KL Sentral.</div></div>
+        <div class="comment"><div class="meta">Isabella W.</div><div class="text">Thank you! I can collect tomorrow afternoon.</div></div>
+        <div class="comment"><div class="meta">Lucas H.</div><div class="text">I can also donate some fruits later this week.</div></div>
+        <div class="comment"><div class="meta">Mia P.</div><div class="text">This platform really helps reduce food waste.</div></div>
+      </div>
+      <form class="comment-form">
+        <input class="form-control mb-2" placeholder="Your name" required>
+        <textarea class="form-control mb-2" rows="2" placeholder="Write a comment..." required></textarea>
+        <button type="submit" class="btn btn-primary btn-sm btn-post">Post Comment</button>
+      </form>
+    </div>
+
+    <!-- 帖子 3 -->
+    <div class="card forum-card shadow-sm p-3" data-aos="fade-up">
+      <h5>📈 Tips for Reducing Food Waste at Home</h5>
+      <div class="stats">👀 289 views · 👍 61 likes · Posted Jan 14, 2026</div>
+      <div class="comments-container">
+        <div class="comment"><div class="meta">Charlotte B.</div><div class="text">Always label food with dates to avoid forgetting them.</div></div>
+        <div class="comment"><div class="meta">Ethan R.</div><div class="text">Sharing before food expires is the best solution.</div></div>
+        <div class="comment"><div class="meta">Amelia J.</div><div class="text">Composting is also a good habit.</div></div>
+      </div>
+      <form class="comment-form">
+        <input class="form-control mb-2" placeholder="Your name" required>
+        <textarea class="form-control mb-2" rows="2" placeholder="Write a comment..." required></textarea>
+        <button type="submit" class="btn btn-primary btn-sm btn-post">Post Comment</button>
+      </form>
+    </div>
+
+    <!-- 帖子 4 -->
+    <div class="card forum-card shadow-sm p-3" data-aos="fade-up">
+      <h5>📣 Community Food Sharing Events</h5>
+      <div class="stats">👀 355 views · 👍 97 likes · Posted Jan 15, 2026</div>
+      <div class="comments-container">
+        <div class="comment"><div class="meta">Harper M.</div><div class="text">Planning a food drive this Saturday near campus.</div></div>
+        <div class="comment"><div class="meta">Liam T.</div><div class="text">I can help with transportation.</div></div>
+        <div class="comment"><div class="meta">Ella R.</div><div class="text">I’ll bring fresh vegetables.</div></div>
+        <div class="comment"><div class="meta">Noah S.</div><div class="text">Great initiative, see you all there.</div></div>
+      </div>
+      <form class="comment-form">
+        <input class="form-control mb-2" placeholder="Your name" required>
+        <textarea class="form-control mb-2" rows="2" placeholder="Write a comment..." required></textarea>
+        <button type="submit" class="btn btn-primary btn-sm btn-post">Post Comment</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2025 VIVO 2.0 | All Rights Reserved.</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script>
+  // 评论功能
+  document.querySelectorAll('.comment-form').forEach(form => {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = this.querySelector('input').value.trim();
+      const text = this.querySelector('textarea').value.trim();
+      if(!name || !text) return;
+      const box = this.closest('.forum-card').querySelector('.comments-container');
+      const div = document.createElement('div');
+      div.className = 'comment';
+      div.innerHTML = `<div class="meta">${name}</div><div class="text">${text}</div>`;
+      box.appendChild(div);
+      this.reset();
+    });
+  });
+</script>
+</body>
+</html>

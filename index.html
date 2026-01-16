@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodShare Malaysia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.0rem;
+      color: #ffffff;
+      vertical-align: middle;
+    }
+    .hero-section {
+  position: relative;
+  min-height: 100vh;
+
+    /* 背景图片 */
+    background: url("img/bg.jpg") no-repeat center center / cover;
+
+    /* 文字在最上层 */
+    z-index: 1;
+  }
+
+  /* 灰色半透明遮罩层 */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* 灰色 + 透明度 */
+    background-color: rgba(0, 0, 0, 0.45);
+
+    z-index: 0;
+  }
+
+  /* 确保内容在遮罩层之上 */
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"> 
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <span class="logo-text">VIVO 2.0</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link" href="community.html">COMMUNITY</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">DONATE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<header class="hero-section d-flex align-items-center text-white text-center">
+  <div class="container">
+    <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">
+      Welcome to our website
+    </h1>
+    <p class="lead animate__animated animate__fadeInUp">
+      Focused · Innovative · Caring
+    </p>
+    <a href="about.html" class="btn btn-light btn-lg mt-3 animate__animated animate__zoomIn">
+      Learn More
+    </a>
+  </div>
+</header>
+
+
+<!-- About Section -->
+<section class="py-5" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">About Us</h2>
+    <p class="text-muted">FoodShare Malaysia is a platform dedicated to reducing food waste and helping communities in need. We connect donors, volunteers, and local organizations to make a positive impact across Malaysia.</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5" data-aos="zoom-in">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card h-100 shadow-sm hover-card">
+          <div class="card-body text-center">
+            <h3 class="card-title">Food Donation</h3>
+            <p class="card-text">Facilitating food donations from businesses and individuals to support those in need.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up">
+        <div class="card h-100 shadow-sm hover-card">
+          <div class="card-body text-center">
+            <h3 class="card-title">Food Rescue</h3>
+            <p class="card-text">Collecting surplus food from restaurants and stores to reduce waste and feed communities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right">
+        <div class="card h-100 shadow-sm hover-card">
+          <div class="card-body text-center">
+            <h3 class="card-title">Community Support</h3>
+            <p class="card-text">Partnering with NGOs and volunteers to strengthen sustainable food-sharing networks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Gallery -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Food Sharing in Action</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <img src="img/8.jpg" class="img-fluid rounded shadow-sm" alt="Food Donation Event">
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <img src="img/9.jpg" class="img-fluid rounded shadow-sm" alt="Fresh Fruits Distribution">
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/10.jpg" class="img-fluid rounded shadow-sm" alt="Community Meal Sharing">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2026 FoodShare Malaysia | All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

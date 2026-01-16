@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VIVO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* 加粗 */
+    font-size: 2.0rem; /* 可以根据需要调整大小 */
+    color: #ffffff; /* 文字颜色 */
+    vertical-align: middle; /* 和图片垂直对齐 */
+}
+    .hero-section {
+  position: relative;
+  min-height: 100vh;
+
+    /* 背景图片 */
+    background: url("img/bg4.jpg") no-repeat center center / cover;
+
+    /* 文字在最上层 */
+    z-index: 1;
+  }
+
+  /* 灰色半透明遮罩层 */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* 灰色 + 透明度 */
+    background-color: rgba(0, 0, 0, 0.45);
+
+    z-index: 0;
+  }
+
+  /* 确保内容在遮罩层之上 */
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+
+</style>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"> 
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <span class="logo-text">VIVO 2.0</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link" href="community.html">COMMUNITY</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">DONATE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<header class="hero-section d-flex align-items-center text-white text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Contact Us</h1>
+    <p class="lead animate__animated animate__fadeInUp">We are here to support you anytime</p>
+  </div>
+</header>
+
+<!-- Contact Form -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4" data-aos="zoom-in">Contact Us</h2>
+    <form class="row g-3 shadow p-4 bg-light rounded" data-aos="fade-up">
+      <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter your name">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="col-12">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="5" placeholder="Enter your message"></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary btn-lg">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="py-5 bg-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Company Address</h2>
+    <p>📍 Address: No.123, XX Road, XX District, XX City</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2025 Company Name | All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script src="js/main.js"></script>
+</body>
+</html>
